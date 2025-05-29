@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM Text Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Text Generation with Hugging Face</h1>
+    <form action="/generate" method="post">
+        <textarea name="prompt" rows="4" cols="50" placeholder="Enter a prompt..."></textarea><br>
+        <button type="submit">Generate</button>
+    </form>
+    {% if output %}
+        <h2>Generated Text:</h2>
+        <p>{{ output }}</p>
+    {% endif %}
+</body>
+</html>
